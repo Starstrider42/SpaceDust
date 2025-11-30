@@ -21,10 +21,10 @@ namespace SpaceDust
     public string Name = "";
     public DiscoverMode DiscoverMode;
     public DiscoverMode IdentifyMode;
-    public double LocalThreshold = 0.01;
+    public double LocalThreshold = 1e-5;        // t/m^3 (0.008 atm)
     public double DiscoverRange = 70000;
     public double IdentifyRange = 30000;
-    public double density = 0.05;
+    public double density = 0.05;               // KSP resource mass (t/unit)
 
     private const string DISCOVER_MODE_PARAMETER_NAME = "DiscoverMode";
     private const string IDENTIFY_MODE_PARAMETER_NAME = "IdentifyMode";
