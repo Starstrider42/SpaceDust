@@ -18,8 +18,8 @@ namespace SpaceDust
     public string Name = "undefined";
     // The basic efficiency, applied at local V = 0
     public float BaseEfficiency;
-    public double MinHarvestValue = 0.0001d;
-    public double density = 0.05;
+    public double MinHarvestValue = 0.0001d;    // t/m^3 (0.08 atm)
+    public double density = 0.05;               // KSP resource mass (t/unit)
 
 
     public HarvestedResource() { }
@@ -59,12 +59,11 @@ namespace SpaceDust
     [KSPField(isPersistant = false)]
     public float IntakeSpeedStatic = 0f;
 
-    // The velocity to use when the intake is static
+    // The effective area of the intake
     [KSPField(isPersistant = false)]
     public float IntakeArea = 0f;
 
     // Maps how well the intake works as velocity increases. 0 = nothing, 1= baseEfficiency
-
     [KSPField(isPersistant = false)]
     public FloatCurve IntakeVelocityScale;
 
@@ -114,7 +113,7 @@ namespace SpaceDust
     [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = false, guiName = "#LOC_SpaceDust_ModuleSpaceDustHarvester_Field_IntakeSpeed")]
     public string IntakeSpeed = "";
 
-    // UI field for showing sscoop status
+    // UI field for showing scoop status
     [KSPField(isPersistant = false, guiActive = true, guiActiveEditor = false, guiName = "#LOC_SpaceDust_ModuleSpaceDustHarvester_Field_Scoop")]
     public string ScoopUI = "";
 

@@ -60,7 +60,7 @@ namespace SpaceDust
     [KSPField(isPersistant = true)]
     public float CurrentPowerConsumption = 1f;
 
-    // Current cost to run the scanner
+    // Number of slots the telescope is equipped with
     [KSPField(isPersistant = true)]
     public int Slots = 2;
 
@@ -91,9 +91,9 @@ namespace SpaceDust
     [KSPField(isPersistant = false)]
     public double ObjectiveDiameter = 1.8d;
 
-    // Size of the lens
+    // Field of view (in radians)
     [KSPField(isPersistant = false)]
-    public double FieldOfView = 1.8d;
+    public double FieldOfView = 0.001d;     // 3.4 arcminutes
 
     [KSPEvent(guiActive = true, guiActiveEditor = true, guiName = "#LOC_SpaceDust_ModuleSpaceDustTelescope_Event_EnableTelescope", active = true)]
     public void EnableTelescope()

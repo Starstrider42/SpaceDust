@@ -19,11 +19,11 @@ namespace SpaceDust
     [KSPField(isPersistant = false)]
     public float minResToLeave = 0.1f;
 
-    /// Am i enabled?
+    /// Does the scanner work in vacuum?
     [KSPField(isPersistant = false)]
     public bool ScanInSpace = true;
 
-    /// Am i enabled?
+    /// Does the scanner work in atmosphere?
     [KSPField(isPersistant = false)]
     public bool ScanInAtmosphere = true;
 
