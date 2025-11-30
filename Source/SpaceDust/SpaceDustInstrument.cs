@@ -47,7 +47,7 @@ namespace SpaceDust
       // Configure the default curve
       AtmosphereEffect = new FloatCurve();
       AtmosphereEffect.Add(0f, 1f);
-      AtmosphereEffect.Add(70000f, 5f);
+      AtmosphereEffect.Add(70000f, 0.5f);
       AtmosphereEffect.Add(500000f, 0f);
       ConfigNode floatCurveNode = new ConfigNode();
       if (node.TryGetNode(ATMOSPHERE_PARAMETER_NAME, ref floatCurveNode))
